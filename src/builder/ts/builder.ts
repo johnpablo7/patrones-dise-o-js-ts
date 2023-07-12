@@ -65,7 +65,7 @@ class NormalPersonBuilder implements PersonBuilder {
     this.name = "";
     this.lastName = "";
     this.age = 0;
-    this.country = "country";
+    this.country = "";
     this.city = "";
     this.hobbies = [];
   }
@@ -133,6 +133,7 @@ class PersonDirector {
 
 // creación 1
 const personBuilder = new NormalPersonBuilder();
+
 const john = personBuilder
   .setName("John")
   .setLastName("Apellido")
@@ -158,5 +159,6 @@ console.log(juan);
 // creación con director
 const director = new PersonDirector(personBuilder);
 director.createSimplePerson("John", "Cena");
+
 const johnCena = personBuilder.build();
 console.log(johnCena);
